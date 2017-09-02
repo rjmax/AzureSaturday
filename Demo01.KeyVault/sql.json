@@ -15,20 +15,10 @@
             "type": "Microsoft.Sql/servers",
             "location": "[resourceGroup().location]",
             "apiVersion": "2014-04-01-preview",
-            "dependsOn": [],
-            "tags": {
-                "displayName": "sqlsvr"
-            },
             "properties": {
                 "administratorLogin": "myAdmin",
                 "administratorLoginPassword": "[parameters('mySecret')]"
             }
         }
-    ],
-    "outputs": {
-        "fqdn": {
-            "type": "string",
-            "value": "[reference(variables('sqlsvrName')).fullyQualifiedDomainName]"
-        }
-    }
+    ]
 }
